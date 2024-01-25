@@ -26,4 +26,8 @@ jobs:
       - name: Publish .NET
         run: |
           cd WebAPI
-          dotnet publish -c Release -o .\myapp
+          dotnet publish -c Release -o published
+
+      - name: Copy dotnet to IIS
+        run: |
+          Copy-Item -Path "$env:GITHUB_WORKSPACE\WebAPI\WebAPI\published\*" -Destination "C:\www\webapi_app" -Recurse -Force

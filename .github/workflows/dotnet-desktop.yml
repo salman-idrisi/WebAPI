@@ -20,6 +20,7 @@ jobs:
 
       - name: Build with .NET
         run: |
+          cd WebAPI
           dotnet build --configuration Release
       
       - name: Publish .NET

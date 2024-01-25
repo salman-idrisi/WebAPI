@@ -30,4 +30,4 @@ jobs:
 
       - name: Copy dotnet to IIS
         run: |
-          Copy-Item -Path "$env:GITHUB_WORKSPACE\WebAPI\WebAPI\published\*" -Destination "C:\www\webapi_app" -Recurse -Force
+          Copy-Item -Path "$env:GITHUB_WORKSPACE\WebAPI\published\*" -Destination "C:\www\webapi_app" -Recurse -Force
